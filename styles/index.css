@@ -8,21 +8,44 @@
 body {
     margin: 0 auto;
     width: 100%;
-    height: 100vh;
-    max-height: 100vh;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 50px;
+    display: flex; /* Mette testo e toggle sulla stessa riga */
+    justify-content: space-between; /* Spinge il testo a sinistra e il toggle a destra */
+    align-items: flex-start; /* Li tiene allineati in alto */
+    margin-top: 60px;
+    margin-bottom: 80px;
+    padding: 0 10%; /* Aumentiamo il margine laterale per farlo somigliare allo screen */
 }
+
+
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+header p {
+    color: #6c757d;
+    max-width: 500px; /* Accorciamo un po' la riga */
+    margin: 10px 0 0 0; /* Solo un po' di spazio sopra, zero ai lati */
+    text-align: left; /* Forza il testo a sinistra */
+    line-height: 1.6;
+}
+
+.toggle {
+    display: flex;
+    justify-content: flex-end; /* Allinea il contenuto del toggle a destra */
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    color: #495057;
+    white-space: nowrap; /* Impedisce alle parole "Monthly/Yearly" di andare a capo */
 }
 
 main {
-    display: flex; /*allineare le card orizzontalmente*/
+    display: flex;
+    /*allineare le card orizzontalmente*/
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -30,12 +53,14 @@ main {
     flex-wrap: wrap;
     /* Fa andare a capo le card su schermi piccoli */
 }
-.card { /*prime due card bianche e forma*/
+
+.card {
+    /*prime due card bianche e forma*/
     background: white;
     padding: 40px;
     border-radius: 20px;
     width: 350px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     text-align: left;
 }
 
@@ -43,7 +68,8 @@ main {
 .card.pro {
     background-color: #6200ee;
     color: white;
-    transform: scale(1.05); /* La rende leggermente più grande */
+    transform: scale(1.05);
+    /* La rende leggermente più grande */
 }
 
 .prezzo {
@@ -72,6 +98,7 @@ button {
     background-color: white;
     color: #6200ee;
 }
+
 ul {
     list-style: none;
 }
@@ -94,11 +121,13 @@ li {
     margin-right: 10px;
     opacity: 0.5;
 }
+
 /* TABLET: Le prime due vicine, la terza sotto larga */
 @media (max-width: 992px) {
     .card.ultimate {
         width: 100%;
-        max-width: 720px; /* Si adatta alla larghezza delle due sopra */
+        max-width: 720px;
+        /* Si adatta alla larghezza delle due sopra */
     }
 }
 
@@ -107,10 +136,61 @@ li {
     main {
         flex-direction: column;
     }
+
     .card {
         width: 100%;
     }
+
     .card.pro {
-        transform: scale(1); /* Togliamo l'ingrandimento su mobile */
+        transform: scale(1);
+        /* Togliamo l'ingrandimento su mobile */
     }
+}
+
+/* La scatola esterna dello switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+/* Nascondiamo il quadratino standard del browser */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Lo sfondo nero (la pillola) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    /* Colore nero come nello screen */
+    border-radius: 20px;
+    transition: 0.4s;
+    /* Rende il movimento fluido */
+}
+
+/* Il pallino bianco interno */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* Quando l'input è cliccato, sposta il pallino a destra */
+input:checked+.slider:before {
+    transform: translateX(20px);
 }
