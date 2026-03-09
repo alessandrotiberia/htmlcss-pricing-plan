@@ -16,13 +16,59 @@ header {
     text-align: center;
     margin-bottom: 50px;
 }
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
 main {
-    display: flex;
+    display: flex; /*allineare le card orizzontalmente*/
     justify-content: center;
     align-items: center;
     gap: 20px;
     /* Spazio tra le card */
     flex-wrap: wrap;
     /* Fa andare a capo le card su schermi piccoli */
+}
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+/* La card centrale (Professional) ha colori invertiti */
+.card.pro {
+    background-color: #6200ee;
+    color: white;
+    transform: scale(1.05); /* La rende leggermente più grande */
+}
+
+.prezzo {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.numeri {
+    font-size: 3rem;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #6200ee;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+/* Bottone bianco per la card viola */
+.pro button {
+    background-color: white;
+    color: #6200ee;
 }
