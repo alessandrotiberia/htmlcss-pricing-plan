@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>htmlcss-pricing-plan</title>
-
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
@@ -14,23 +14,76 @@
         <p>We are an industry-leading company that values honesty, <br>
             integrity and efficiency, building quality products.</p>
         <div class="toggle">
-          <span>Monthly</span>
-          <input type="checkbox"> <!--elemento per controllo-->
-          <span>Yearly</span>
+            <span>Monthly</span>
+            <input type="checkbox"> <!--elemento per controllo-->
+            <span>Yearly</span>
         </div>
     </header>
-    <main>      
-       <div class="card"> 
-        <h2>Basic</h2>
-        <p>Most Popular</p>
+    <main>
+        <div class="card">
+            <h2>Basic</h2>
+            <p>Most Popular</p>
+            <!--metto dentro un div  per modificare in css poi-->
+            <div class="prezzo">
+                <span class="dollaro">$</span>
+                <span class="numeri">2.45</span>
+                <span class="periodo">/mo</span>
+            </div>
+            <p>Yearly <span class="sconto">15% off</span></p>
+            <button>Choose plan</button>
+            <ul>
+                <li class="v">Unlimited Products</li>
+                <li class="v">Custom Permissions</li>
+                <li class="v">Custom Infrastructure</li>
+                <li class="x">Custom Design & features</li>
+                <li class="x">Unlimited updates</li>
+                <li class="x">Unlimited Infrastructure</li>
+            </ul>
+        </div>
+
+
+
+        <div class="card pro">
+            <h2>Professional</h2>
+            <p>Recommended</p>
+            <!--metto dentro un div  per modificare in css poi-->
+            <div class="prezzo">
+                <span class="dollaro">$</span>
+                <span class="numeri">4.45</span>
+                <span class="periodo">/mo</span>
+            </div>
+            <p>Yearly <span class="sconto">15% off</span></p>
+            <button>Choose plan</button>
+            <ul>
+                <li class="v">Unlimited Products</li>
+                <li class="v">Custom Permissions</li>
+                <li class="v">Custom Infrastructure</li>
+                <li class="v">Custom Design & features</li>
+                <li class="x">Unlimited updates</li>
+                <li class="x">Unlimited Infrastructure</li>
+            </ul>
+        </div>
+
+               <div class="card ultimate">
+        <h2>Ultimate</h2>
+        <p>Best Value</p>
        <!--metto dentro un div  per modificare in css poi-->
        <div class="prezzo">
         <span class="dollaro">$</span>
-        <span class="numeri">2.45</span>
+        <span class="numeri">12.45</span>
         <span class="periodo">/mo</span>
        </div>
+      <p>Yearly <span class="sconto">15% off</span></p>
+       <button>Choose plan</button>
+       <ul>
+        <li class="v">Unlimited Products</li>
+        <li class="v">Custom Permissions</li>
+        <li class="v">Custom Infrastructure</li>
+        <li class="v">Custom Design & features</li>
+        <li class="v">Unlimited updates</li>
+        <li class="v">Unlimited Infrastructure</li>
+       </ul>
        </div>
-       
     </main>
 </body>
 
