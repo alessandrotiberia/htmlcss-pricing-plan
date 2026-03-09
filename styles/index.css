@@ -30,7 +30,7 @@ main {
     flex-wrap: wrap;
     /* Fa andare a capo le card su schermi piccoli */
 }
-.card {
+.card { /*prime due card bianche e forma*/
     background: white;
     padding: 40px;
     border-radius: 20px;
@@ -93,4 +93,24 @@ li {
     content: "✕";
     margin-right: 10px;
     opacity: 0.5;
+}
+/* TABLET: Le prime due vicine, la terza sotto larga */
+@media (max-width: 992px) {
+    .card.ultimate {
+        width: 100%;
+        max-width: 720px; /* Si adatta alla larghezza delle due sopra */
+    }
+}
+
+/* MOBILE: Tutto in colonna */
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
+    .card.pro {
+        transform: scale(1); /* Togliamo l'ingrandimento su mobile */
+    }
 }
