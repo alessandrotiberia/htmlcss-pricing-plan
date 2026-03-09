@@ -72,3 +72,25 @@ button {
     background-color: white;
     color: #6200ee;
 }
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* aggiungete le icone  */
+.v::before {
+    content: "✓";
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.x::before {
+    content: "✕";
+    margin-right: 10px;
+    opacity: 0.5;
+}
