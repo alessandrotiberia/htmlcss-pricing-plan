@@ -1,13 +1,28 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
-    font-family: sans-serif;
     margin: 0 auto;
     width: 100%;
     height: 100vh;
     max-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* Spazio tra le card */
+    flex-wrap: wrap;
+    /* Fa andare a capo le card su schermi piccoli */
 }
